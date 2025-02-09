@@ -30,18 +30,20 @@ def update_video(videos):
     list_all_videos(videos)
     index = int(input("Enter the video number  you want to update"))
     if 1<= index<= len(videos):
-        name =input("Enter the new name of video")
-        time = input("Enter the new video time")
+        name =input("Enter the new name of video:")
+        time = input("Enter the new video time:")
         videos[index-1] = {'name': name , 'time': time}
         save_data_helper(videos)
+        print("video updated successfully")
     else :
         print("invalid index selected")
 def delete_video(videos):
     list_all_videos(videos)
-    index = int(input("Enter the video number you want to delete"))
+    index = int(input("Enter the video number you want to delete: "))
     if 1<= index <= len(videos):
         del videos[index-1]
         save_data_helper(videos)
+        print("video is deleted successfully")
     else:
         print("invalid video selected")
 def main():
