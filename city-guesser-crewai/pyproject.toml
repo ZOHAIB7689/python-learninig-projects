@@ -1,0 +1,22 @@
+[project]
+name = "city-guesser"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ZOHAIB7689", email = "bzohaib754@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "crewai>=0.102.0",
+    "litellm>=1.60.2",
+]
+
+[project.scripts]
+city-guesser = "city_guesser:main"
+guess = "city_guesser.main:kickoff"
+start =  "city_guesser.main1:kickoff"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
